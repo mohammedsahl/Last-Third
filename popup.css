@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Walter+Turncoat');
 
-@import "compass/css3";
-
 div {
   width: 200px;
   margin: 10px;
@@ -42,6 +40,6 @@ li a {
 }
 
 li a:hover {
-  font-size: 30px;
+  font-size: 25px;
   background: #f6f6f6;
 }

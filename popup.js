@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function () {
     function success(position) {
       const latitude  = position.coords.latitude;
       const longitude = position.coords.longitude;
-      // TODO: Add all timings
+
       status.textContent = '';
       let httpRequest;
 
@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function () {
           const maghribElement = prayerTimingsList.children[4];
           const ishaElement = prayerTimingsList.children[5];
 
+          // console.log(lastThirdElement);
+
           function addZero(i) {
             if (i < 10) {
               i = "0" + i;
@@ -48,12 +50,12 @@ document.addEventListener('DOMContentLoaded', function () {
               let fajrDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), fajrTimeArray[0], fajrTimeArray[1])
               let diff = new Date(fajrDate - ((fajrDate - maghribDate) / 3))
               // console.log(lastThirdElement);
-              lastThirdElement.textContent += `${addZero(diff.getHours())}:${addZero(diff.getMinutes())}`;
-              fajrElement.textContent += res.data.timings.Fajr
-              dhuhrElement.textContent += res.data.timings.Dhuhr
-              asrElement.textContent += res.data.timings.Asr
-              maghribElement.textContent += res.data.timings.Maghrib
-              ishaElement.textContent += res.data.timings.Isha
+              lastThirdElement.innerHTML = `<a href="https://www.islamicfinder.org/">${lastThirdElement.innerText} ${addZero(diff.getHours())}:${addZero(diff.getMinutes())}</a>`;
+              fajrElement.innerHTML = `<a href="https://www.islamicfinder.org/">${fajrElement.textContent} ${res.data.timings.Fajr}</a>`
+              dhuhrElement.innerHTML = `<a href="https://www.islamicfinder.org/">${dhuhrElement.textContent} ${res.data.timings.Dhuhr}</a>`
+              asrElement.innerHTML = `<a href="https://www.islamicfinder.org/">${asrElement.textContent} ${res.data.timings.Asr}</a>`
+              maghribElement.innerHTML = `<a href="https://www.islamicfinder.org/">${maghribElement.textContent} ${res.data.timings.Maghrib}</a>`
+              ishaElement.innerHTML = `<a href="https://www.islamicfinder.org/">${ishaElement.textContent} ${res.data.timings.Isha}</a>`
 
               // status.textContent = `The lastThird of the night starts at ${addZero(diff.getHours())}:${addZero(diff.getMinutes())}`
               // alert(`Fajr is at ${fajr} and Maghrib is at ${maghrib}`)
