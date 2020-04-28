@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
       httpRequest.onreadystatechange = updateContents;
-      // console.log(`http://api.aladhan.com/v1/timings/${Date.now()}?latitude=${latitude}&longitude=${longitude}&method=2`);
-        httpRequest.open('GET', `http://api.aladhan.com/v1/timings/${Math.round((new Date()).getTime() / 1000)}?latitude=${latitude}&longitude=${longitude}&method=2`);
+      // console.log(`http://api.aladhan.com/v1/timings/${Math.round((new Date()).getTime() / 1000)}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
+        httpRequest.open('GET', `http://api.aladhan.com/v1/timings/${Math.round((new Date()).getTime() / 1000)}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
         httpRequest.send();
 
         function updateContents() {
