@@ -1,10 +1,22 @@
-div {
-  width: 200px;
+.container {
+  width: 250px;
   margin: 10px;
+}
+
+body {
+  border-style: outset;
+  border-radius: 5px;
 }
 
 h2 {
   font: 25px/1.5 Helvetica, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+
+h3 {
+  font: 15px/1.5 Helvetica, Verdana, sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -16,7 +28,7 @@ ul {
 }
 
 li {
-  font: 200 20px/1.5 Helvetica, Verdana, sans-serif;
+  font: 250 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
 
@@ -34,10 +46,10 @@ li a {
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
   display: block;
-  width: 200px;
+  width: 250px;
 }
 
-li a:hover {
+li a:hover{
   font-size: 25px;
-  background: #f6f6f6;
+  background: #e6e6e6;
 }
