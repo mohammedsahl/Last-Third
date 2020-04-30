@@ -1,12 +1,36 @@
 .container {
   width: 210px;
   margin: 10px;
+  padding: 10px;
+}
+
+.blur {
+  background: rgba(255, 255, 255, 0.8); // Make sure this color has an opacity of less than 1
+  backdrop-filter: blur(8px); // This be the blur
+  /* border-right: 1px solid whitesmoke; */
 }
 
 body {
   border-style: outset;
   border-radius: 5px;
+  /* background-color: black;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover; */
 }
+
+/* .heading2 {
+font: 25px/1.5 Helvetica, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+display: inline;
+}
+
+.button {
+display: inline
+} */
+
+
 
 h2 {
   font: 25px/1.5 Helvetica, Verdana, sans-serif;
@@ -39,12 +63,11 @@ li:last-child {
 li a {
   text-decoration: none;
   color: #000;
-
   -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
   -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
   -o-transition: font-size 0.3s ease, background-color 0.3s ease;
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
-  transition: font-size 0.3s ease, background-color 0.3s ease;
+  transition: font-size 0.1s ease, background-color 0.1s ease;
   display: block;
   width: 210px;
 }
