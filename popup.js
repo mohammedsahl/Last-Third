@@ -53,12 +53,12 @@ function success(position) {
         let fajrDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), fajrTimeArray[0], fajrTimeArray[1])
         let diff = new Date(fajrDate - ((fajrDate - maghribDate) / 3))
         // console.log(lastThirdElement);
-        lastThirdElement.innerHTML = `<a href="http://www.islamicfinder.org">${lastThirdElement.innerText} ${addZero(diff.getHours())}:${addZero(diff.getMinutes())}</a>`;
-        fajrElement.innerHTML = `<a href="http://www.islamicfinder.org">${fajrElement.textContent} ${res.data.timings.Fajr}</a>`
-        dhuhrElement.innerHTML = `<a href="http://www.islamicfinder.org">${dhuhrElement.textContent} ${res.data.timings.Dhuhr}</a>`
-        asrElement.innerHTML = `<a href="http://www.islamicfinder.org/">${asrElement.textContent} ${res.data.timings.Asr}</a>`
-        maghribElement.innerHTML = `<a href="http://www.islamicfinder.org">${maghribElement.textContent} ${res.data.timings.Maghrib}</a>`
-        ishaElement.innerHTML = `<a href="http://www.islamicfinder.org">${ishaElement.textContent} ${res.data.timings.Isha}</a>`
+        lastThirdElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${lastThirdElement.innerText} ${addZero(diff.getHours())}:${addZero(diff.getMinutes())}</a>`;
+        fajrElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${fajrElement.textContent} ${res.data.timings.Fajr}</a>`
+        dhuhrElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${dhuhrElement.textContent} ${res.data.timings.Dhuhr}</a>`
+        asrElement.innerHTML = `<a href="http://www.islamicfinder.org/" target="_blank">${asrElement.textContent} ${res.data.timings.Asr}</a>`
+        maghribElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${maghribElement.textContent} ${res.data.timings.Maghrib}</a>`
+        ishaElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${ishaElement.textContent} ${res.data.timings.Isha}</a>`
       } else {
         alert('There was a problem with the request.');
       }

@@ -1,5 +1,5 @@
 .container {
-  width: 250px;
+  width: 210px;
   margin: 10px;
 }
 
@@ -28,7 +28,7 @@ ul {
 }
 
 li {
-  font: 250 20px/1.5 Helvetica, Verdana, sans-serif;
+  font: 210 20px/1.5 Helvetica, Verdana, sans-serif;
   border-bottom: 1px solid #ccc;
 }
 
@@ -46,7 +46,7 @@ li a {
   -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
   transition: font-size 0.3s ease, background-color 0.3s ease;
   display: block;
-  width: 250px;
+  width: 210px;
 }
 
 li a:hover{
