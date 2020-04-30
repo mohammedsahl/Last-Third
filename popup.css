@@ -63,10 +63,10 @@ li:last-child {
 li a {
   text-decoration: none;
   color: #000;
-  -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -o-transition: font-size 0.3s ease, background-color 0.3s ease;
-  -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+  -webkit-transition: font-size 0.1s ease, background-color 0.1s ease;
+  -moz-transition: font-size 0.1s ease, background-color 0.1s ease;
+  -o-transition: font-size 0.1s ease, background-color 0.1s ease;
+  -ms-transition: font-size 0.1s ease, background-color 0.1s ease;
   transition: font-size 0.1s ease, background-color 0.1s ease;
   display: block;
   width: 210px;
