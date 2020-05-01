@@ -18,10 +18,14 @@ function success(position) {
 
   httpRequest.onreadystatechange = updateContents;
   const timestamp = Math.round((new Date()).getTime() / 1000)
-  // console.log(`http://api.aladhan.com/v1/timings/${Math.round((new Date()).getTime() / 1000)}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
-  
-  httpRequest.open('GET', `http://api.aladhan.com/v1/timings/${timestamp}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
-  httpRequest.send();
+  let url = `http://api.aladhan.com/v1/timings/`
+  chrome.storage.sync.get((items) => {
+    const params = `${timestamp}?latitude=${latitude}&longitude=${longitude}&method=${items.method}&school=${items.school}`
+    httpRequest.open('GET', `${url}${params}`);
+    httpRequest.send();
+  })
+  // console.log(method, school);
+  // console.log(`http://api.aladhan.com/v1/timings/${timestamp}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
 
   function updateContents() {
     const prayerTimingsList = document.querySelector("#prayer-timings").children
@@ -33,15 +37,9 @@ function success(position) {
     const maghribElement = prayerTimingsList[4];
     const ishaElement = prayerTimingsList[5];
 
-    lastThirdElement.addEventListener("mouseover", hover)
-
     function addZero(i) {
       if (i < 10) {i = "0" + i;}
       return i;
-    }
-
-    function hover() {
-      console.log(this.innerText);
     }
 
     if (httpRequest.readyState === XMLHttpRequest.DONE) {
