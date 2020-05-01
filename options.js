@@ -10,7 +10,7 @@ function saveSettings() {
 function restoreSettings() {
   chrome.storage.sync.get({
     method: 2,
-    school: 1
+    school: 0
   }, (items) => {
     document.getElementById('method').value = items.method;
     document.getElementById('school').value = items.school;
