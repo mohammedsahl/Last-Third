@@ -23,7 +23,6 @@ function success(position) {
     const params = `${timestamp}?latitude=${latitude}&longitude=${longitude}&method=${items.method}&school=${items.school}`
     httpRequest.open('GET', `${url}${params}`);
     httpRequest.send();
-    console.log(`${url}${params}`);
   })
   // console.log(method, school);
   // console.log(`http://api.aladhan.com/v1/timings/${timestamp}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
