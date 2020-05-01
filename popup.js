@@ -19,6 +19,7 @@ function success(position) {
   httpRequest.onreadystatechange = updateContents;
   const timestamp = Math.round((new Date()).getTime() / 1000)
   // console.log(`http://api.aladhan.com/v1/timings/${Math.round((new Date()).getTime() / 1000)}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
+  
   httpRequest.open('GET', `http://api.aladhan.com/v1/timings/${timestamp}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
   httpRequest.send();
 
