@@ -1,7 +1,12 @@
-// var dt = new Date();
-// document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
-
 function success(position) {
+  function date() {
+    var dt = new Date();
+    const dateOptions = { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' };
+    const dateFormatter = new Intl.DateTimeFormat('en-US', dateOptions);
+    const dateAsFormattedString = dateFormatter.format(dt);
+    document.getElementById("datetime").innerHTML = dateAsFormattedString;
+  }
+
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
 
@@ -24,8 +29,6 @@ function success(position) {
     httpRequest.open('GET', `${url}${params}`);
     httpRequest.send();
   })
-  // console.log(method, school);
-  // console.log(`http://api.aladhan.com/v1/timings/${timestamp}?latitude=${latitude}&longitude=${longitude}&method=2&school=1`);
 
   function updateContents() {
     const prayerTimingsList = document.querySelector("#prayer-timings").children
