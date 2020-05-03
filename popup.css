@@ -4,12 +4,6 @@
   padding: 10px;
 }
 
-.blur {
-  background: rgba(255, 255, 255, 0.8); // Make sure this color has an opacity of less than 1
-  backdrop-filter: blur(8px); // This be the blur
-  /* border-right: 1px solid whitesmoke; */
-}
-
 /* body {
   border-style: outset;
   border-radius: 5px;
@@ -63,7 +57,7 @@ ul {
 }
 
 li {
-  font: 210 20px/1.5 Helvetica, Verdana, sans-serif;
+  font: 20px/1.5 Helvetica, Verdana, sans-serif;
   font-family: inherit;
   font-weight: 300;
   border-bottom: 1px solid #ccc;
