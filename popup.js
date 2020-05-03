@@ -31,6 +31,7 @@ function success(position) {
   })
 
   function updateContents() {
+    date();
     const prayerTimingsList = document.querySelector("#prayer-timings").children
 
     const lastThirdElement = prayerTimingsList[0];
