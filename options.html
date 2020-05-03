@@ -4,37 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="options.css">
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <body>
+<form class="" action="index.html" method="post">
+  <select id="method" class="custom-select">
+    <option value="0">Shia Ithna-Ansari</option>
+    <option value="1">University of Islamic Sciences, Karachi</option>
+    <option value="2">Islamic Society of North America</option>
+    <option value="3">Muslim World League</option>
+    <option value="4">Umm Al-Qura University, Makkah</option>
+    <option value="5">Egyptian General Authority of Survey</option>
+    <option value="6">Institute of Geophysics, University of Tehran</option>
+    <option value="7">Gulf Region</option>
+    <option value="8">Kuwait</option>
+    <option value="9">Qatar</option>
+    <option value="10">Majlis Ugama Islam Singapura, Singapore</option>
+    <option value="11">Union Organization islamic de France</option>
+    <option value="12">Diyanet İşleri Başkanlığı, Turkey</option>
+    <option value="13">Spiritual Administration of Muslims of Russia</option>
+  </select>
+  <!-- <label for="school">School:</label> -->
+  <select id="school" class="custom-select">
+    <option value="0">Shafi, Hanbali, Maliki</option>
+    <option value="1">Hanafi</option>
+  </select>
 
-<label for="method">Method:</label>
-<select id="method">
- <option value="0">Shia Ithna-Ansari</option>
- <option value="1">University of Islamic Sciences, Karachi</option>
- <option value="2">Islamic Society of North America</option>
- <option value="3">Muslim World League</option>
- <option value="4">Umm Al-Qura University, Makkah</option>
- <option value="5">Egyptian General Authority of Survey</option>
- <option value="6">Institute of Geophysics, University of Tehran</option>
- <option value="7">Gulf Region</option>
- <option value="8">Kuwait</option>
- <option value="9">Qatar</option>
- <option value="10">Majlis Ugama Islam Singapura, Singapore</option>
- <option value="11">Union Organization islamic de France</option>
- <option value="12">Diyanet İşleri Başkanlığı, Turkey</option>
- <option value="13">Spiritual Administration of Muslims of Russia</option>
-</select>
-
-<br>
-
-<label for="school">School:</label>
-<select id="school">
- <option value="0">Shafi, Hanbali, Maliki</option>
- <option value="1">Hanafi</option>
-</select>
+</form>
 
 <div id="status"></div>
-<button id="save">Save</button>
+<button id="save" class="btn-block">Save</button>
 
 <script src="options.js"></script>
 </body>
