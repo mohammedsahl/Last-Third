@@ -10,11 +10,8 @@
 .display-4 {
   font-size: 1.4rem;
   font-weight: inherit;
-  display:inline-block;
-  text-align: center;
-  position: relative;
-  left: 25%;
-  right: 25%
+  display:flex;
+  justify-content: center;
 }
 
 .btn-group-sm {

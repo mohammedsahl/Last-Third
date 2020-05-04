@@ -4,16 +4,13 @@ function success(position) {
     const dateOptions = { timeZone: 'UTC', month: 'long', day: 'numeric', year: 'numeric' };
     const dateFormatter = new Intl.DateTimeFormat('en-US', dateOptions);
     const dateAsFormattedString = dateFormatter.format(dt);
-    document.getElementById("datetime").innerHTML = dateAsFormattedString;
+    document.getElementById("datetime").innerText = dateAsFormattedString;
   }
 
   const latitude  = position.coords.latitude;
   const longitude = position.coords.longitude;
 
-  status.textContent = '';
-  let httpRequest;
-
-  httpRequest = new XMLHttpRequest();
+  let httpRequest = new XMLHttpRequest();
 
   if (!httpRequest) {
     alert('Giving up :( Cannot create an XMLHTTP instance');
@@ -52,10 +49,11 @@ function success(position) {
         res = JSON.parse(httpRequest.responseText)
         maghribTimeArray = (res.data.timings.Maghrib).split(':')
         fajrTimeArray = (res.data.timings.Fajr).split(':')
+
         let maghribDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate() - 1, maghribTimeArray[0], maghribTimeArray[1])
         let fajrDate = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate(), fajrTimeArray[0], fajrTimeArray[1])
         let diff = new Date(fajrDate - ((fajrDate - maghribDate) / 3))
-        // console.log(lastThirdElement);
+
         lastThirdElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${lastThirdElement.innerText} ${addZero(diff.getHours())}:${addZero(diff.getMinutes())}</a>`;
         fajrElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${fajrElement.textContent} ${res.data.timings.Fajr}</a>`
         dhuhrElement.innerHTML = `<a href="http://www.islamicfinder.org" target="_blank">${dhuhrElement.textContent} ${res.data.timings.Dhuhr}</a>`
@@ -71,12 +69,11 @@ function success(position) {
 
 
 function error() {
-  status.textContent = 'Unable to retrieve your location';
+  alert('Unable to retrieve your location')
 }
 
 if (!navigator.geolocation) {
-  status.textContent = 'Geolocation is not supported by your browser';
+  alert('Geolocation is not supported by your browser');
 } else {
-  status.textContent = 'Locating…';
   navigator.geolocation.getCurrentPosition(success, error);
 }
