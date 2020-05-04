@@ -1,65 +1,34 @@
 .container {
-  width: 225px;
-  margin: 10px;
+  margin: 1px;
+  width: 250px;
   padding: 10px;
-}
-
-/* body {
-  border-style: outset;
-  border-radius: 5px;
-} */
-  /* background-color: black;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover; */
-/*
-button {
-  color: black;
-  padding: 1px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font: 15px Helvetica, Verdana, sans-serif;
-  margin: 4px 2px;
-  cursor: pointer;
-  -webkit-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-
-button:hover {
-  box-shadow: 5px 12px 16px 0 rgba(0,0,0,0.19),0 17px 50px 0 rgba(0,0,0,0.19);
-} */
-
-h2 {
-  font: 20px black;
-  display:inline-block;
+  border-style: solid;
+  border-color: #343a40;
+  border-width: 1px;
 }
 
 .display-4 {
   font-size: 1.4rem;
-  display:inline-block;
-  width: 60%;
+  font-weight: inherit;
+  display:flex;
+  justify-content: center;
 }
 
 .btn-group-sm {
   display:inline-block;
-  width: 20%;
-}
-
-btn {
-  display: inline-block;
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+  padding-bottom: 10px;
 }
 
 li {
-  font: 20px/1.5 Helvetica, Verdana, sans-serif;
+  font-size: 20px;
   font-family: inherit;
-  font-weight: 300;
+  font-weight: inherit;
   border-bottom: 1px solid #ccc;
 }
 
@@ -69,17 +38,22 @@ li:last-child {
 
 li a {
   text-decoration: none;
-  color: #000000;
+  color: #343a40;
   -webkit-transition: font-size 0.1s ease, background-color 0.1s ease;
   -moz-transition: font-size 0.1s ease, background-color 0.1s ease;
   -o-transition: font-size 0.1s ease, background-color 0.1s ease;
   -ms-transition: font-size 0.1s ease, background-color 0.1s ease;
   transition: font-size 0.1s ease, background-color 0.1s ease;
   display: block;
-  width: 205px;
+  width: inherit;
+}
+
+a:link {
+  text-decoration: none;
 }
 
 li a:hover{
   font-size: 25px;
+  color: #343a40;
   background: #e6e6e6;
 }
